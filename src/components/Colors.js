@@ -5,6 +5,7 @@ import Loading from './Loading'
 function colorsReducer(state, action) {
     switch (action.type) {
         case "success":
+            action.colors.data.sort((a,b)=>b.year-a.year)
             return {
                 colors: action.colors,
                 error: null,
@@ -54,7 +55,7 @@ export default function Colors() {
                     <h3>Items:{colors.data.length}</h3>
                 </div>
                 <div className="colors-grid">
-                    {colors.data.sort((a,b)=>b.year-a.year).map(x=>
+                    {colors.data.map(x=>
                         <div className="grid-item" key={x.id}>
                             <div className="grid-box" style={{background:`${x.color}`}}>
                                 <div className="grid-hex">

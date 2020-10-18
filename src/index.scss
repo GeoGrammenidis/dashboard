@@ -19,10 +19,13 @@ $added-padding: 25px;
     -ms-user-select: none;
     user-select: none;
 }
-
-body {
+html {
+    height: 100%;
+}
+body, #app{
     font-family: "Roboto";
     margin: 0px;
+    min-height: 100%;
 }
 .header {
     @include unselected;
@@ -206,121 +209,175 @@ body {
     }
 }
 .main {
-    position: relative;
-    top:$header-height;
-    margin-left:$navbar-width;
-    padding: $added-padding;
-    h2, h3 {
-        margin: 0px;
-    }
-    @media (max-width: 800px) {
-        margin-left:0px;
-    }
-    .colors-header {
+    min-height: 100vh;
+    display: flex;
+    .wrap{
+        height:auto;
         width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-    .colors-grid {
-        display: flex;
-        flex-wrap: wrap;
-        .grid-item {
-            width: 33.33%;
-            height: 175px;
+        margin-left:$navbar-width;
+        padding: $added-padding;
+        padding-top: $added-padding+$header-height;
+        h2, h3 {
+            margin: 0px;
+        }
+        @media (max-width: 800px) {
+            margin-left:0px;
+        }
+        .colors-header {
+            width: 100%;
             display: flex;
-            margin-top: 15px;
-            margin-bottom: 15px;
-
-            @media (min-width: 1001px) {
-                &:nth-child(3n+1) .grid-box{
-                    margin-left: 0px;
-                }
-                &:nth-child(3n) .grid-box{
-                    margin-right: 0px;
-                }
-            }
-            @media (max-width: 1000px) {
-                width: 50%;
-                &:nth-child(2n+1) .grid-box{
-                    margin-left: 0px;
-                }
-                &:nth-child(2n) .grid-box{
-                    margin-right: 0px;
-                }
-            }
-            @media (max-width: 550px) {
-                width: 100%;
-                &:nth-child(n) .grid-box{
-                    margin-left: 0px;
-                    margin-right: 0px;
-                }
-            }
-            .grid-box {
-                position: relative;
-                width: 100%;
-                height: 100%;
-                margin-left: 15px;
-                margin-right: 15px;
-                background-color: green;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .colors-grid {
+            display: flex;
+            flex-wrap: wrap;
+            .grid-item {
+                width: 33.33%;
+                height: 175px;
                 display: flex;
-                flex-direction: column;
-                align-items: center;
-                .grid-hex {
-                    height:100%;
-                    display: flex;
-                    align-items: center;
-                    color: rgba(0,0,0,.4);
-                }
-                .grid-text {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    width: 100%;
-                    background-color: rgba(0,0,0,.5);
-                    transition: background-color ease-in-out 0.4s;
-                    p {
-                        margin: 15px;
-                        color: white;
+                margin-top: 15px;
+                margin-bottom: 15px;
+    
+                @media (min-width: 1001px) {
+                    &:nth-child(3n+1) .grid-box{
+                        margin-left: 0px;
+                    }
+                    &:nth-child(3n) .grid-box{
+                        margin-right: 0px;
                     }
                 }
-                &:hover .grid-text{
-                    background-color: rgba(0,0,0,0);
+                @media (max-width: 1000px) {
+                    width: 50%;
+                    &:nth-child(2n+1) .grid-box{
+                        margin-left: 0px;
+                    }
+                    &:nth-child(2n) .grid-box{
+                        margin-right: 0px;
+                    }
+                }
+                @media (max-width: 550px) {
+                    width: 100%;
+                    &:nth-child(n) .grid-box{
+                        margin-left: 0px;
+                        margin-right: 0px;
+                    }
+                }
+                .grid-box {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    margin-left: 15px;
+                    margin-right: 15px;
+                    background-color: green;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    .grid-hex {
+                        height:100%;
+                        display: flex;
+                        align-items: center;
+                        color: rgba(0,0,0,.4);
+                    }
+                    .grid-text {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        width: 100%;
+                        background-color: rgba(0,0,0,.5);
+                        transition: background-color ease-in-out 0.4s;
+                        p {
+                            margin: 15px;
+                            color: white;
+                        }
+                    }
+                    &:hover .grid-text{
+                        background-color: rgba(0,0,0,0);
+                    }
                 }
             }
         }
-    }
-    .users-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        max-width: 1000px;
-    }
-    .users-table {
-        overflow-x: auto;
-        table{
-            width: 100%;
+        .users-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             max-width: 1000px;
-            min-width: 650px;
-            border-collapse: collapse;
-            text-align: left;
-            background-color: $table-accent;
-            thead {
-                border-bottom: 1px solid $border-color;
-            }
-            th, td {
-                padding: 8px 0px;
-            }
-            tbody{
-                tr:nth-child(2n+1){
-                    background-color: $border-color;
+            button {
+                text-transform: uppercase;
+                color: white;
+                background-color: $nav-accent;
+                border-color: transparent;
+                box-shadow: none;
+                border-radius: 3px;
+                padding: 4px 10px;
+                &:focus {
+                    outline: none;
+                    box-shadow: none;
+                }
+                &:hover {
+                    background-color: $primary;
+                }
+                &[disabled] {
+                    background-color: $footer-color;
                 }
             }
         }
+        .users-table {
+            overflow-x: auto;
+            table{
+                width: 100%;
+                max-width: 1000px;
+                min-width: 650px;
+                border-collapse: collapse;
+                text-align: left;
+                background-color: $table-accent;
+                thead {
+                    border-bottom: 1px solid $border-color;
+                }
+                th, td {
+                    padding: 8px 0px;
+                }
+                tbody{
+                    tr:nth-child(2n+1){
+                        background-color: $border-color;
+                    }
+                }
+            }
+        }
+        .not-found h1{
+            margin: 0px;
+        }
     }
-/*     .users-table table thead tr{
-        width: 100%;
-        background-color: red;
-        display: flex;
-    } */
+   
+}
+
+.loading {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .loader {
+        border: 5px solid $primary; 
+        border-top: 5px solid white;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        animation: spin 2s linear infinite;
+    }
+    
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    .loader-message {
+        width: 60px;
+    }
+}
+
+.full-page-loading {
+    height: 100vh;
+    display: flex;
+    align-items: center;
 }
