@@ -215,7 +215,7 @@ body, #app{
         height:auto;
         width: 100%;
         margin-left:$navbar-width;
-        padding: $added-padding;
+        /* padding: $added-padding; */
         padding-top: $added-padding+$header-height;
         h2, h3 {
             margin: 0px;
@@ -298,6 +298,7 @@ body, #app{
             }
         }
         .users-header {
+            padding: 0px $added-padding;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -323,6 +324,7 @@ body, #app{
             }
         }
         .users-table {
+            margin: 0px $added-padding;
             overflow-x: auto;
             table{
                 width: 100%;
