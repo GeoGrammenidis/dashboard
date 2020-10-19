@@ -47,12 +47,18 @@ body, #app {
 .header .logout span {
   margin-right: 10px;
 }
+.header .logout span:hover {
+  cursor: pointer;
+}
 .header .logout svg {
   height: 30px;
   width: 30px;
   border-radius: 15px;
   background-color: #ffffff;
   fill: #004c6d;
+}
+.header .logout svg:hover {
+  cursor: pointer;
 }
 .header .burger {
   display: none;
@@ -194,11 +200,10 @@ body, #app {
   display: flex;
 }
 .main .wrap {
-  display: flex;
-  overflow: auto;
-  flex-direction: column;
   height: auto;
   width: 100%;
+  flex-direction: column;
+  overflow: auto;
   margin-left: 250px;
   padding: 25px;
   padding-top: 85px;
@@ -262,18 +267,18 @@ body, #app {
   height: 100%;
   margin-left: 15px;
   margin-right: 15px;
-  background-color: green;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .main .wrap .colors-grid .grid-item .grid-box .grid-hex {
+  color: rgba(0, 0, 0, 0.4);
   height: 100%;
   display: flex;
   align-items: center;
-  color: rgba(0, 0, 0, 0.4);
 }
 .main .wrap .colors-grid .grid-item .grid-box .grid-text {
+  color: #ffffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -284,9 +289,8 @@ body, #app {
   -o-transition: background-color ease-in-out 0.4s;
   transition: background-color ease-in-out 0.4s;
 }
-.main .wrap .colors-grid .grid-item .grid-box .grid-text p {
+.main .wrap .colors-grid .grid-item .grid-box .grid-text span {
   margin: 15px;
-  color: #ffffff;
 }
 .main .wrap .colors-grid .grid-item .grid-box:hover .grid-text {
   background-color: rgba(0, 0, 0, 0);
@@ -350,7 +354,7 @@ body, #app {
 }
 .loading .loader {
   border: 5px solid #0075a1;
-  border-top: 5px solid white;
+  border-top: 5px solid transparent;
   border-radius: 50%;
   width: 30px;
   height: 30px;

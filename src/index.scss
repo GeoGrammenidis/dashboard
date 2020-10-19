@@ -55,6 +55,9 @@ body, #app{
         font-size: 0.6em;
         span {
             margin-right: 10px;
+            &:hover {
+                cursor: pointer;
+            }
         }
         svg{
             height: 30px;
@@ -62,6 +65,9 @@ body, #app{
             border-radius: 15px;
             background-color: $letters-color-light;
             fill: $secondary;
+            &:hover {
+                cursor: pointer;
+            }
         }
     }
     .burger {
@@ -195,11 +201,10 @@ body, #app{
     min-height: 100vh;
     display: flex;
     .wrap{
-        display: flex;
-        overflow: auto;
-        flex-direction: column;
         height: auto;
         width: 100%;
+        flex-direction: column;
+        overflow: auto;
         margin-left: $navbar-width;
         padding: $added-padding;
         padding-top: $added-padding+$header-height;
@@ -224,7 +229,6 @@ body, #app{
                 display: flex;
                 margin-top: 15px;
                 margin-bottom: 15px;
-    
                 @media (min-width: 1001px) {
                     &:nth-child(3n+1) .grid-box{
                         margin-left: 0px;
@@ -255,17 +259,17 @@ body, #app{
                     height: 100%;
                     margin-left: 15px;
                     margin-right: 15px;
-                    background-color: green;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     .grid-hex {
+                        color: rgba(0,0,0,.4);
                         height:100%;
                         display: flex;
                         align-items: center;
-                        color: rgba(0,0,0,.4);
                     }
                     .grid-text {
+                        color: $letters-color-light;
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
@@ -275,9 +279,8 @@ body, #app{
                         -moz-transition: background-color ease-in-out 0.4s;
                         -o-transition: background-color ease-in-out 0.4s;
                         transition: background-color ease-in-out 0.4s;
-                        p {
+                        span {
                             margin: 15px;
-                            color: $letters-color-light;
                         }
                     }
                     &:hover .grid-text{
@@ -339,7 +342,6 @@ body, #app{
     }
    
 }
-
 .loading {
     width: 100%;
     height: 100%;
@@ -349,7 +351,7 @@ body, #app{
     justify-content: center;
     .loader {
         border: 5px solid $primary; 
-        border-top: 5px solid white;
+        border-top: 5px solid transparent;
         border-radius: 50%;
         width: 30px;
         height: 30px;
@@ -364,7 +366,6 @@ body, #app{
         width: 60px;
     }
 }
-
 .full-page-loading {
     height: 100vh;
     display: flex;

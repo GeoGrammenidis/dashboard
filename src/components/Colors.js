@@ -62,8 +62,8 @@ export default function Colors() {
                                     <h3>{x.color}</h3>
                                 </div>
                                 <div className="grid-text">
-                                    <p>{x.name}</p>
-                                    <p>{x.year}</p>
+                                    <span>{x.name}</span>
+                                    <span>{x.year}</span>
                                 </div>
                             </div>
                         </div>)

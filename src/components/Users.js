@@ -89,7 +89,6 @@ export default function Users() {
                 <div className="users-header">
                     <h2>Users</h2>
                     <button disabled={!activeBtn} onClick={()=>deleteAction()}>Delete</button>
-                    {/* <div disabled={!activeBtn} onClick={()=>deleteAction()}>Delete</div> */}
                 </div>
                 <div className="users-table">
                     <table>
