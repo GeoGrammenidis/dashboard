@@ -197,10 +197,13 @@ body, #app {
   display: flex;
 }
 .main .wrap {
+  display: flex;
+  overflow: auto;
+  flex-direction: column;
   height: auto;
   width: 100%;
   margin-left: 250px;
-  /* padding: $added-padding; */
+  padding: 25px;
   padding-top: 85px;
 }
 .main .wrap h2, .main .wrap h3 {
@@ -289,7 +292,6 @@ body, #app {
   background-color: rgba(0, 0, 0, 0);
 }
 .main .wrap .users-header {
-  padding: 0px 25px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -315,7 +317,6 @@ body, #app {
   background-color: #8aa9b7;
 }
 .main .wrap .users-table {
-  margin: 0px 25px;
   overflow-x: auto;
 }
 .main .wrap .users-table table {
