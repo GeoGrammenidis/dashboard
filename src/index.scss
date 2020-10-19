@@ -34,20 +34,17 @@ body, #app{
     width: 100%;
     height: $header-height;
     display: flex;
+    text-transform: uppercase;
     .logo-wrap {
-        width: $navbar-width;
+        width: $navbar-width - 40px;
+        padding-left: 40px;
         height: 100%;
         display: flex;
         align-items: center;
-        padding-left: 40px;
     }
     .inside-header {
-        text-transform: uppercase;
         display: flex;
         align-items: center;
-        p { 
-            margin: 0px;
-        }
     }
     .logout {
         position: absolute;
@@ -55,9 +52,8 @@ body, #app{
         height: 100%;
         display: flex;
         align-items: center;
-        text-transform: uppercase;
-        h6 {
-            margin: 0px;
+        font-size: 0.6em;
+        span {
             margin-right: 10px;
         }
         svg{
@@ -78,7 +74,7 @@ body, #app{
         }
         .logout {
             position: relative;
-            h6 {
+            span {
                 display: none;
             }
         }
@@ -106,6 +102,9 @@ body, #app{
                 margin-bottom: 5px;
                 position: relative;
                 top: 0;
+                -webkit-transition: all ease-in-out 0.4s;
+                -moz-transition: all ease-in-out 0.4s;
+                -o-transition: all ease-in-out 0.4s;
                 transition: all ease-in-out 0.4s;
                 &:nth-child(4){
                     margin-bottom: 0px;
@@ -130,38 +129,37 @@ body, #app{
 }
 .navigation {
     @include unselected;
+    background-color: $nav-background-color;
     position: fixed;
     top: 0px;
     z-index: 1;
-    background-color: $nav-background-color;
     height: 100%;
     width: $navbar-width;
     ul {
-        margin-top: $header-height+10px;
         list-style: none;
+        margin-top: $header-height+10px;
         padding: 0px;
-        li{
-            padding: 0px;
-            width: 100%;
-            a{
-                padding: 12px;
-                padding-left: 30px;
-                display: block;
-                text-decoration: none;
-                border-top: 1px solid rgba($border-color,.3);
-                transition: background-color 0.4s;
-                color: $letters-color-light;
-                &:hover, &.selected, &:focus{
-                    background-color: $nav-accent;
-                }
+        a{
+            color: $letters-color-light;
+            display: block;
+            padding: 12px;
+            padding-left: 30px;
+            text-decoration: none;
+            border-top: 1px solid rgba($border-color,.3);
+            -webkit-transition: background-color 0.4s;
+            -moz-transition: background-color 0.4s;
+            -o-transition: background-color 0.4s;
+            transition: background-color 0.4s;
+            &:hover, &.selected, &:focus{
+                background-color: $nav-accent;
             }
-            &:nth-child(1) a{
-                border-top: none;
-            }
+        }
+        li:nth-child(1) a{
+            border-top: none;
         }
     }
     @media (max-width: 800px) {
-        top: 60px;
+        top: $header-height;
         width: 100%;
         height: 0%;
         ul {
@@ -170,9 +168,7 @@ body, #app{
             padding: 0px;
             margin: 0px;
             overflow: hidden;
-            padding-top: 0px;
             font-size: 1.5em;
-            list-style-type:none;
             display: flex;
             justify-content: space-around;
             align-items: center;
@@ -183,13 +179,14 @@ body, #app{
             transition: max-height 0.5s ease-in-out 0s;
             li {
                 text-align: center;
+                width: 100%;
                 a {
                     padding-left: 0px;
                 }
             }
         }
         &.open ul{
-            max-height: 165px;
+            max-height: 160px; // ~53*3
             margin: 0px;
         }
     }
@@ -201,9 +198,9 @@ body, #app{
         display: flex;
         overflow: auto;
         flex-direction: column;
-        height:auto;
+        height: auto;
         width: 100%;
-        margin-left:$navbar-width;
+        margin-left: $navbar-width;
         padding: $added-padding;
         padding-top: $added-padding+$header-height;
         h2, h3 {
@@ -274,6 +271,9 @@ body, #app{
                         align-items: center;
                         width: 100%;
                         background-color: rgba(0,0,0,.5);
+                        -webkit-transition: background-color ease-in-out 0.4s;
+                        -moz-transition: background-color ease-in-out 0.4s;
+                        -o-transition: background-color ease-in-out 0.4s;
                         transition: background-color ease-in-out 0.4s;
                         p {
                             margin: 15px;

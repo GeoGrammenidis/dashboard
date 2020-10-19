@@ -23,8 +23,8 @@ export default function NavBar() {
                     </div>
                 </div>
                 <div className="logo-wrap"><NavLink to="/" exact activeClassName="selected" onClick={()=>onClickClose()}><Logo/></NavLink></div>
-                <div className="inside-header"><p>Dashboard</p></div>
-                <div className="logout"><h6>Logout</h6><Person/></div>
+                <div className="inside-header">Dashboard</div>
+                <div className="logout"><span>Logout</span><Person/></div>
             </div>
             <div className={active?"navigation open":"navigation"}>
                 <ul>
