@@ -6,6 +6,7 @@ $footer-color: #8aa9b7;
 $body-color: #333;
 $border-color: #ccc;
 $table-accent: #f5f5f5; /* applies to table row zebra-striping style */
+$letters-color-light: #ffffff;
 $header-height: 60px;
 $navbar-width: 250px;
 $added-padding: 25px;
@@ -19,37 +20,26 @@ $added-padding: 25px;
     -ms-user-select: none;
     user-select: none;
 }
-html {
-    height: 100%;
-}
 body, #app{
     font-family: "Roboto";
     margin: 0px;
-    min-height: 100%;
 }
 .header {
     @include unselected;
+    background-color: $secondary;
+    color: $letters-color-light;
     position: fixed;
     top: 0px;
     z-index: 2;
     width: 100%;
     height: $header-height;
     display: flex;
-    background-color: $secondary;
-    color: white;
     .logo-wrap {
         width: $navbar-width;
         height: 100%;
         display: flex;
         align-items: center;
-        justify-content: left;
-        a {
-            text-decoration: none;
-            height: 22px;
-        }
-        svg {
-            padding-left: 40px;
-        }
+        padding-left: 40px;
     }
     .inside-header {
         text-transform: uppercase;
@@ -74,8 +64,7 @@ body, #app{
             height: 30px;
             width: 30px;
             border-radius: 15px;
-            background-clip: padding-box;
-            background-color: white;
+            background-color: $letters-color-light;
             fill: $secondary;
         }
     }
@@ -96,9 +85,7 @@ body, #app{
         .logo-wrap {
             display: flex;
             justify-content: center;
-            svg {
-                padding-left: 0px;
-            }
+            padding-left: 0px;
         }
         .burger-container{
             position: relative;
@@ -112,7 +99,7 @@ body, #app{
             display: block;
             cursor: pointer;
             span{
-                background: #eee;
+                background: $letters-color-light;
                 display: block;
                 width: 30px;
                 height: 3px;
@@ -163,7 +150,7 @@ body, #app{
                 text-decoration: none;
                 border-top: 1px solid rgba($border-color,.3);
                 transition: background-color 0.4s;
-                color: white;
+                color: $letters-color-light;
                 &:hover, &.selected, &:focus{
                     background-color: $nav-accent;
                 }
@@ -287,7 +274,7 @@ body, #app{
                         transition: background-color ease-in-out 0.4s;
                         p {
                             margin: 15px;
-                            color: white;
+                            color: $letters-color-light;
                         }
                     }
                     &:hover .grid-text{
@@ -304,7 +291,7 @@ body, #app{
             max-width: 1000px;
             button {
                 text-transform: uppercase;
-                color: white;
+                color: $letters-color-light;
                 background-color: $nav-accent;
                 border-color: transparent;
                 box-shadow: none;

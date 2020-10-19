@@ -3,14 +3,9 @@
 /* applies to navigation borders and navigation item hover, focus and active state */
 /* applies to table row zebra-striping style */
 @import url("https://fonts.googleapis.com/css?family=Roboto:regular,bold");
-html {
-  height: 100%;
-}
-
 body, #app {
   font-family: "Roboto";
   margin: 0px;
-  min-height: 100%;
 }
 
 .header {
@@ -20,27 +15,20 @@ body, #app {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  background-color: #004c6d;
+  color: #ffffff;
   position: fixed;
   top: 0px;
   z-index: 2;
   width: 100%;
   height: 60px;
   display: flex;
-  background-color: #004c6d;
-  color: white;
 }
 .header .logo-wrap {
   width: 250px;
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: left;
-}
-.header .logo-wrap a {
-  text-decoration: none;
-  height: 22px;
-}
-.header .logo-wrap svg {
   padding-left: 40px;
 }
 .header .inside-header {
@@ -67,8 +55,7 @@ body, #app {
   height: 30px;
   width: 30px;
   border-radius: 15px;
-  background-clip: padding-box;
-  background-color: white;
+  background-color: #ffffff;
   fill: #004c6d;
 }
 .header .burger {
@@ -90,8 +77,6 @@ body, #app {
   .header .logo-wrap {
     display: flex;
     justify-content: center;
-  }
-  .header .logo-wrap svg {
     padding-left: 0px;
   }
   .header .burger-container {
@@ -107,7 +92,7 @@ body, #app {
     cursor: pointer;
   }
   .header .burger span {
-    background: #eee;
+    background: #ffffff;
     display: block;
     width: 30px;
     height: 3px;
@@ -163,7 +148,7 @@ body, #app {
   text-decoration: none;
   border-top: 1px solid rgba(204, 204, 204, 0.3);
   transition: background-color 0.4s;
-  color: white;
+  color: #ffffff;
 }
 .navigation ul li a:hover, .navigation ul li a.selected, .navigation ul li a:focus {
   background-color: #1a6a8d;
@@ -298,7 +283,7 @@ body, #app {
 }
 .main .wrap .colors-grid .grid-item .grid-box .grid-text p {
   margin: 15px;
-  color: white;
+  color: #ffffff;
 }
 .main .wrap .colors-grid .grid-item .grid-box:hover .grid-text {
   background-color: rgba(0, 0, 0, 0);
@@ -312,7 +297,7 @@ body, #app {
 }
 .main .wrap .users-header button {
   text-transform: uppercase;
-  color: white;
+  color: #ffffff;
   background-color: #1a6a8d;
   border-color: transparent;
   box-shadow: none;
