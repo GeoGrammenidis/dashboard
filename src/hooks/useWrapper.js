@@ -1,6 +1,5 @@
 import React from 'react'
 import { fetching } from '../utils/api'
-import PropTypes from 'prop-types'
 
 function wrapperReducer(state, action){
     switch (action.type) {
@@ -27,7 +26,7 @@ function wrapperReducer(state, action){
     }
 }
 
-export default function useWrapper(dataKind="colors") {
+export default function useWrapper( dataKind ) {
     const initialState = {
         error: null,
         loading: true,
@@ -56,8 +55,4 @@ export default function useWrapper(dataKind="colors") {
         loading:state.loading,
         error:state.error
     }
-}
-
-useWrapper.propType = {
-    dataKind: PropTypes.number
 }
