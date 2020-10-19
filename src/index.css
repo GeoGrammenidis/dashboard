@@ -302,12 +302,12 @@ body, #app {
   max-width: 1000px;
 }
 .main .wrap .users-header button {
-  text-transform: uppercase;
   color: #ffffff;
   background-color: #1a6a8d;
   border-color: transparent;
-  box-shadow: none;
   border-radius: 3px;
+  box-shadow: none;
+  text-transform: uppercase;
   padding: 4px 10px;
 }
 .main .wrap .users-header button:focus {

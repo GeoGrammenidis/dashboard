@@ -295,12 +295,12 @@ body, #app{
             align-items: center;
             max-width: 1000px;
             button {
-                text-transform: uppercase;
                 color: $letters-color-light;
                 background-color: $nav-accent;
                 border-color: transparent;
-                box-shadow: none;
                 border-radius: 3px;
+                box-shadow: none;
+                text-transform: uppercase;
                 padding: 4px 10px;
                 &:focus {
                     outline: none;
