@@ -299,6 +299,7 @@ body, #app {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 10px;
   max-width: 1000px;
 }
 .main .wrap .users-header button {
