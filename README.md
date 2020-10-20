@@ -1,16 +1,16 @@
 # Dashboard app
-To run this project after you clone it you have to install the npm packages:
-*    `npm install`
-You can run it on localhost:
-*    `npm run start`
-You can build it with:
-*    `npm run build`
 
+To run this project after you clone it 
+* You have to install the npm packages:`npm install`
+* You can run it on localhost: `npm run start`
+* You can build it with: `npm run build`
+
+Also
 * Technologies used: **Sass, React, Html, CSS, Javascript**
 * Other tools used: **npm, git, webpack**
 * Editor used: **Visual Studio Code**
 
-Points of interest:
+## Points of interest:
 
     - src/components/Loading.js
         - spinner created with html and css
