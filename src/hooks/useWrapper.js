@@ -47,7 +47,7 @@ export default function useWrapper( dataKind ) {
             .catch((error)=>_isMounted.current&&dispatch({type:"error", error:error.toString()}))
             console.log("fetching...")
         }else{
-            dispatch({type:"sessionLoad"})
+            _isMounted.current&&dispatch({type:"sessionLoad"})
         }
         return ()=> _isMounted.current=false
     }, [])

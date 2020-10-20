@@ -19,12 +19,12 @@ export default function App() {
                 <NavBar/>
                 <div className="main">
                     <div className="wrap">
-                            <Switch>
-                                <Route path='/' exact component={Welcome} />
-                                <Route path='/colors' component={Colors} />
-                                <Route path='/users' component={Users} />
-                                <Route component={()=><div className="not-found"><h1>404 - Page not found</h1></div>}/>
-                            </Switch>
+                        <Switch>
+                            <Route path='/' exact component={Welcome} />
+                            <Route path='/colors' component={Colors} />
+                            <Route path='/users' component={Users} />
+                            <Route component={()=><div className="not-found"><h1>404 - Page not found</h1></div>}/>
+                        </Switch>
                     </div>
                 </div>
             </React.Suspense>
