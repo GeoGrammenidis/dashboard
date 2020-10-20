@@ -1,17 +1,14 @@
-url
+# Dashboard app
 To run this project after you clone it you have to install the npm packages:
-    npm install
+    `npm install`
 You can run it on localhost:
-    npm run start
+    `npm run start`
 You can build it with:
-    npm run build
+    `npm run build`
 
-Technologies used:
-    Sass, React, Html, CSS, Javascript
-Other tools used:
-    npm, git, webpack
-Editor used:
-    Visual Studio Code
+* Technologies used: **Sass, React, Html, CSS, Javascript**
+* Other tools used: **npm, git, webpack**
+* Editor used: **Visual Studio Code**
 
 Points of interest:
     - src/app.js
