@@ -11,11 +11,6 @@ You can build it with:
 * Editor used: **Visual Studio Code**
 
 Points of interest:
-    - src/app.js
-        - React.lazy let us render only-needed components.
-        - React.Suspense loads fallback component Loading while loading.
-        - NavBar component is always loaded.
-        - Switch loads components based on url
 
     - src/components/Loading.js
         - spinner created with html and css
@@ -24,6 +19,12 @@ Points of interest:
             - to have one extra dot in time based on the speed variable.
             - to return to zero dots when it has already 3 dots.
     
+    - src/app.js
+        - React.lazy let us render only-needed components.
+        - React.Suspense loads fallback component Loading while loading.
+        - NavBar component is always loaded.
+        - Switch loads components based on url
+
     - src/components/NavBar.js
         - "active" state is used to decide if the menu is shown or not while screen size is less than 800px.
         - div element with class header is positioned fixed to the top of the website and contains:
