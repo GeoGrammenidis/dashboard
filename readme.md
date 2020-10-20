@@ -12,7 +12,7 @@ Other tools used:
 Editor used:
     Visual Studio Code
 
-Points of interests:
+Points of interest:
     - src/app.js
         React.lazy let us render only-needed components.
         React.Suspense loads fallback component Loading while loading.
@@ -22,8 +22,8 @@ Points of interests:
     - src/components/Loading.js
         spinner created with html and css
         loading messsage controlled by "message" state.
-        useEffect hook which changes the message to
-            have one extra dot in time based on the speed variable.
+        useEffect hook which changes the message
+            to have one extra dot in time based on the speed variable.
             to return to zero dots when it has already 3 dots.
     
     - src/components/NavBar.js
@@ -65,9 +65,9 @@ Points of interests:
         returns "loading" and "error" (it also saves data in session storage as mentioned)
 
     - src/components/useDelete.js
-        dispatch case "delete" removes data from session storage variable and removes from "checked" object the right properites.
+        dispatch case "delete" removes data from session storage variable and removes from "checked" object the right properties.
         dispatch case "toggle" toggles the "checked" object property correpsonding to the id given.
         "checked" state is initialized with an object which has properties with keys based on the ids of the table data and values of false.
-        "deleteAction" function is used to dispatch "delete" only after comfirmation.
+        "deleteAction" function is used to dispatch "delete" only after confirmation.
         "toogle" function is used just to dispatch "toggle"
         returns "activeBtn", "checked", "toggle" and "deleteAction"
