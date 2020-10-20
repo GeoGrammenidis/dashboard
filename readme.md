@@ -5,7 +5,7 @@ You can run it on localhost:
 You can build it with:
     npm run build
 
-Techlogies used:
+Technologies used:
     Sass, React, Html, CSS, Javascript
 Other tools used:
     npm, git, webpack
