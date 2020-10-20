@@ -32,6 +32,7 @@ export default function NavBar() {
                     <li><NavLink to="/users" activeClassName="selected" onClick={()=>onClickClose()}>Users</NavLink></li>
                     <li><NavLink to="/settings" activeClassName="selected" onClick={()=>onClickClose()}>Settings</NavLink></li>
                 </ul>
+                <div className="nav-footer">&copy; {(new Date().getFullYear())} Netmechanics</div>
             </div>
         </>
     )

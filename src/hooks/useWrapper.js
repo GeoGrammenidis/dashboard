@@ -36,7 +36,6 @@ export default function useWrapper( dataKind ) {
 
     React.useEffect(() => {
         _isMounted.current = true;
-
         if(!(sessionStorage.getItem(dataKind))){
             fetching(dataKind).then(res=>{
                 const { error } = res;

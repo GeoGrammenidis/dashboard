@@ -196,6 +196,13 @@ body, #app{
             margin: 0px;
         }
     }
+    .nav-footer {
+        color: $footer-color;
+        position: absolute;
+        bottom: 10px;
+        left: 30px;
+        font-size: 0.9em;
+    }
 }
 .main {
     min-height: 100vh;
